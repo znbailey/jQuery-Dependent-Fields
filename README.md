@@ -3,6 +3,8 @@ A [jQuery](http://www.jquery.com/) plugin that will show or hide a field based o
 Example Usage
 ---------------
 
+You probably want to just [look at the example](https://github.com/znbailey/jQuery-Dependent-Fields/blob/master/example.html), but if you prefer to read prose instead of code, here goes --
+
 `$('#form-field').dependsOn('#master-field');`
 
 If #master-field is a checkbox, the row containing '#form-field' will be shown/hidden based on whether the master field is checked/unchecked, respectively.
