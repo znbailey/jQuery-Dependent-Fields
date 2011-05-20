@@ -11,8 +11,8 @@ If #master-field is a select/dropdown, the row containing '#form-field' will be 
 
 You may additionally specify a conditional value or values:
 
-`$('#form-field').dependsOn('#master-field', 'value');
-$('#form-field').dependsOn('#master-field', ['value', 'value2']);`
+`$('#form-field').dependsOn('#master-field', 'value');`
+`$('#form-field').dependsOn('#master-field', ['value', 'value2']);`
 
 This only makes sense when used with a select element - if the value of the selected option is any of the specified values, the dependent field will be shown.
 
