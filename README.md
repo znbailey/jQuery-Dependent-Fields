@@ -17,6 +17,10 @@ You may additionally specify a conditional value or values:
 
 This only makes sense when used with a select element - if the value of the selected option is any of the specified values, the dependent field will be shown.
 
+*Note*: Like you'd expect, you may use any jQuery selector for the first call. The plugin is also written to support idiomatic jQuery chain-ability so you can do things like:
+
+`$('input.depends-on-xyz').dependsOn('#xyz').somethingElse().anotherThing()`
+
 Known Limitations/Shortcomings
 ---------------
 
