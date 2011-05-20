@@ -20,6 +20,5 @@ This only makes sense when used with a select element - if the value of the sele
 Known Limitations/Shortcomings
 ---------------
 
-Only works with checkboxes and select elements.
-
-The plugin depends on your form field being wrapped in a row using a paragraph tag as it looks for the closest wrapping paragraph tag to show/hide. If you use a div or some other element type to wrap your form rows, you will need to modify the .closest('p') calls to use .closest('div') or whatnot.
+* Only works with checkboxes and select elements.
+* The plugin depends on your form field being wrapped in a row using a paragraph tag as it looks for the closest wrapping paragraph tag to show/hide. If you use a div or some other element type to wrap your form rows, you will need to modify the .closest('p') calls to use .closest('div') or whatnot.
