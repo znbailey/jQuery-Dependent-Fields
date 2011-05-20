@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dependent field example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script src="jquery.dependent.fields.js"></script>
+  </head>
+  <body>
+    <h1>Dependent Fields Example</h1>
+    <form action="#">
+      <h3>Checkbox</h3>
+      <p>
+        <label for="master-checkbox">
+          Master Checkbox
+        </label>
+        <input id="master-checkbox" type="checkbox"/>
+      </p>
+      <p>
+        <label for="dependent-field1">
+          Depends on Master 1
+        </label>
+        <input id="dependent-field1" class="depends-on-master-checkbox" type="text"/>
+      </p>
+      <p>
+        <label for="dependent-field2">
+          Depends on Master 2
+        </label>
+        <textarea id="dependent-field2" class="depends-on-master-checkbox"></textarea>
+      </p>
+      <h3>Dropdown</h3>
+      <p>
+        <label for="master-dropdown">
+          Master Dropdown
+        </label>
+        <select id="master-dropdown">
+          <option value="">-- Select a Country --</option>
+          <option value="Canada">Canada</option>
+          <option value="France">France</option>
+          <option value="Germany">Germany</option>
+          <option value="United States">United States</option>
+        </select>
+      </p>
+      <p>
+        <label for="dependent-dropdown">
+          Dependent Dropdown
+        </label>
+        <select id="dependent-dropdown">
+          <option value="">-- Select a State / Territory --</option>
+          <option value="Alabama">Alabama</option>
+          <option value="Saskatchewan">Saskatchewan</option>
+        </select>
+      </p>
+      <input type="submit"/>
+    </form>
+  </body>
+  <script>
+   $('.depends-on-master-checkbox').dependsOn('#master-checkbox');
+   $('#dependent-dropdown').dependsOn('#master-dropdown', ['Canada', 'United States']);
+  </script>
+</html>
