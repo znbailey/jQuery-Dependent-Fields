@@ -1,21 +1,21 @@
-A [jQuery](http://www.jquery.com/) plugin that will show or hide a field based on some other dependent field.
+A [jQuery](http://www.jquery.com/) plugin that will show or hide a "dependent" field based on some other "master" field.
 
 Example Usage
 ---------------
 
 You probably want to just [look at the example](https://github.com/znbailey/jQuery-Dependent-Fields/blob/master/example.html), but if you prefer to read prose instead of code, here goes --
 
-`$('#form-field').dependsOn('#master-field');`
+`$('#dependent-field').dependsOn('#master-field');`
 
-If #master-field is a checkbox, the row containing '#form-field' will be shown/hidden based on whether the master field is checked/unchecked, respectively.
+If #master-field is a checkbox, the row containing '#dependent-field' will be shown/hidden based on whether the master field is checked/unchecked, respectively.
 
-If #master-field is a select/dropdown, the row containing '#form-field' will be shown/hidden based on whether the selected option has a non-empty value.
+If #master-field is a select/dropdown, the row containing '#dependent-field' will be shown/hidden based on whether the selected option has a non-empty value.
 
 You may additionally specify a conditional value or values:
 
-`$('#form-field').dependsOn('#master-field', 'value');`
+`$('#dependent-field').dependsOn('#master-field', 'value');`
 
-`$('#form-field').dependsOn('#master-field', ['value', 'value2']);`
+`$('#dependent-field').dependsOn('#master-field', ['value', 'value2']);`
 
 This only makes sense when used with a select element - if the value of the selected option is any of the specified values, the dependent field will be shown.
 
