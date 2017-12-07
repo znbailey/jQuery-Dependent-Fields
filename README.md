@@ -23,6 +23,41 @@ This only makes sense when used with a select element - if the value of the sele
 
 `$('input.depends-on-xyz').dependsOn('#xyz').somethingElse().anotherThing()`
 
+If you have a input text in a container div, you can specify the 'depends-container' class in the master 
+container DIV:
+
+```
+<div class="depends-container">
+{{ form_row(form.my_input) }}
+</div>
+```
+
+Also you can give a callback after the toggle:
+
+``` 
+
+var fieldRequired = function(){
+	var target = $('#target').find('input[type="text"]');
+
+	if(target.is(':visible')){   
+    	
+    	//add require
+    	target.attr(required,required);
+
+	}else{
+
+    	//remove require
+    	target.removeAttr(required);
+    	
+    }
+}
+
+$('.ui.depends.target').dependsOn('.ui.depends.master',null,fieldRequired);
+
+```
+
+
+
 Known Limitations/Shortcomings
 ---------------
 
